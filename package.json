@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
+    "nuxt": "^3.13.0",
+    "uuidv4": "^6.2.13",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "version": "1.0.0",
+  "description": "Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
