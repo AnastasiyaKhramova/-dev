@@ -1,8 +1,11 @@
 <template>
-    <header class="container">
-        <div class="second-container header">
-            <input class='catalog__find' type="text" placeholder='Search for courses, lessons, resources an...'
-                aria-label="Find product" @change={  debouncedHandleSearchChange } />
+    <header class="container header">
+        <div class="second-container find">
+            <div class="find-wrapper">
+                <img class="find-img" src="../assets/img/lupa.png" alt="lupa" />
+                <input class='find-input' type="text" placeholder='Search for courses, lessons, resources an...'
+                    v-model="searchTerm" aria-label="Find product" @input="debouncedHandleSearchChange" />
+            </div>
             <nav class="nav">
                 <a href="#">All Courses</a>
                 <a href="#">For Business</a>
@@ -14,59 +17,82 @@
     </header>
 </template>
 
-<script setup>
-const handleSearchChange = (e) => {
-    const search = e.target.value.toLowerCase();
-    setSearchTerm(search);
-    setSkip(0);
+<script lang="ts" setup>
+import { useDebounceFn } from '@vueuse/core';
+const searchTerm = ref('');
+const skip = ref(0);
+const handleSearchChange = (value: String) => {
+    const search = value.toLowerCase();
+    searchTerm.value = search;
+    skip.value = 0;
 };
 
-const debouncedHandleSearchChange = useCallback(debounce(handleSearchChange, 1000), []);
+const debouncedHandleSearchChange = useDebounceFn((e) => {
+    handleSearchChange(e.target.value);
+}, 1000);
 </script>
 
 <style lang="scss" scoped>
 .header {
-    min-width: $container;
-    background: image('../assets/img/background.png');
+    height: 636px;
+    background-image: url('../assets/img/background.png');
+    background-size: cover;
+}
+
+.find {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.find-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.find-img {
+    position: absolute;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.find-input {
+    width: 391px;
+    height: 40px;
+    padding: 10.5px 16px 10.5px 48px;
+    background-color: transparent;
+    border: 1px solid $blockcolor;
+    border-radius: 50px;
+    color: $blockcolor;
+}
+
+.find-input::placeholder {
+    color: $blockcolor;
 }
 
 .nav {
     width: 476px;
-    height: 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 32px;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 400;
 
     &__btn {
         width: 124px;
+        height: 40px;
         border: 1px solid $blockcolor;
         border-radius: 4px;
         font-weight: 700;
         line-height: 28.8px;
         text-align: center;
+        background-color: transparent;
+        color: $blockcolor;
     }
 }
 
 hr {
-    width: 1px;
-}
-
-.lang {
-    display: flex;
-    gap: 16px;
-}
-
-.start {
-    font-size: 20px;
-    line-height: 20px;
-    color: #ffffff;
-    background-color: $primary-color;
-    border-radius: 25px;
-    width: 145px;
-    height: 52px;
+    height: 40px;
+    border-left: 1px solid rgba(221, 222, 224, 1);
 }
 </style>

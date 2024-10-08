@@ -6,7 +6,7 @@
                 <details class="faq__details" aria-expanded="false" v-for="question in questions" :key="question.id">
                     <summary>
                         {{ question.question }}
-                        <img class="faq__icon" src={{question.img}} aria-hidden="true" alt="plus" />
+                        <img class="faq__icon" :src="question.img" aria-hidden="true" alt="plus" />
                     </summary>
                     {{ question.answer }}
                 </details>

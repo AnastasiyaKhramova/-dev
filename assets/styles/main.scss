@@ -14,13 +14,17 @@ a {
     cursor: pointer;
 }
 
+button{
+    cursor: pointer;
+}
+
 .container {
     min-width: $container;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 770px;
+    background-color: rgba(248, 249, 250, 1);
 }
 
 .second-container {
-    min-width: $second-container;
+    width: $second-container;
+    margin: 0 auto;
 }

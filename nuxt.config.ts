@@ -1,8 +1,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  css: [ '@/assets/styles/main.scss'],
-  modules: ['bootstrap-vue/nuxt'],
+  css: [ 'bootstrap/dist/css/bootstrap.min.css',
+    '@/assets/styles/main.scss',
+  ],
+  build: {
+    transpile: ['bootstrap']
+  },
   typescript: {
     strict: true,
   },

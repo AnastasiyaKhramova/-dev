@@ -1,35 +1,46 @@
 <template>
     <section class="card">
-        <div class="card__heading">
-            <h3>Most popular!</h3>
-        </div>
+        <h3 class="card__heading">Most popular!</h3>
         <div class="card__conteiner">
             <div>
-                <h3>All Access Membership</h3>
-                <h2>Basic</h2>
+                <h4 class="card__conteiner_title">All Access Membership</h4>
+                <h3 class="card__conteiner_type">Basic</h3>
             </div>
             <div>
-                <p>Includes all courses from many programs</p>
+                <p class="card__conteiner_desc">Includes all courses from many programs</p>
             </div>
-            <div>
-                <h2>Pick your plan:</h2>
-                <div>
-                    <b-form-group label="Individual radios" v-slot="{ ariaDescribedby }">
-                        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="A" checked>$47/month <span>(pay annually — $564 / year)</span> <div>Save 30%!</div>
-                        </b-form-radio>
-                        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios"  value="B">$87/month <span>(pay per month)</span></b-form-radio>
-                    </b-form-group>
+            <div class="card__cost">
+                <h4 class="card__cost_title">Pick your plan:</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        <div class="card__cost_choice">
+                            <h2 class="card__cost_price">$47<span>/month </span></h2>
+                            <p>(pay annually — $564 / year)</p>
+                            <div class="card__cost_sale">Save 30%!</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        <div class="card__cost_choice">
+                            <h2 class="card__cost_price">$87<span>/month </span></h2>
+                            <p>(pay per month)</p>
+                        </div>
+                    </label>
                 </div>
             </div>
             <Button />
-            <div></div>
             <div>
-                <p>Includes:</p>
+                <p class="card__include">Includes:</p>
             </div>
             <div>
-                <ul>
-                    <li>All 100+ Courses <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"  src="../assets/img/question.svg" alt="question"></li>
-                    <li>All 4 Certificate Programs <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"  src="../assets/img/question.svg" alt="question"></li>
+                <ul class="card__include_items">
+                    <li>All 100+ Courses <img                       src="../assets/img/question.svg" alt="question" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Default tooltip. Here you’ll find something on the left."/></li>
+                    <li>All 4 Certificate Programs <img
+                            v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
+                            src="../assets/img/question.svg" alt="question"></li>
                     <li>Excel, PPT, and PDF Files</li>
                     <li>Digital Blockchain Verified Certificates</li>
                 </ul>
@@ -52,9 +63,115 @@ export default {
 <style lang="scss" scoped>
 .card {
     width: 544px;
-}
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    color: $fullcolor;
+    border: none;
 
-.card__heading {
-    background: $basiccolor;
+    &__heading {
+        height: 32px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 22.4px;
+        text-align: center;
+        background: $basiccolor;
+        color: $blockcolor;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    &__conteiner {
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &_title {
+            margin-bottom: 4px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+        }
+
+        &_type {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+        }
+
+        &_desc {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            color: $textcolor;
+        }
+    }
+
+    &__cost {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &_title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25.2px;
+        }
+
+        &_choice {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        &_price {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 44px;
+        }
+
+        &_price span {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 44px;
+        }
+
+        &_choice p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.4px;
+        }
+
+        &_sale {
+            width: 82px;
+            height: 23px;
+            background-color: rgba(233, 240, 250, 1);
+            border-radius: 16px;
+            color: $basiccolor;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    &__include {
+        border-top: 1px solid rgba(221, 222, 224, 1);
+        padding-top: 24px;
+        line-height: 25.6px;
+        color: $textcolor;
+
+        &_items {
+            line-height: 25.6px;
+            color: $textcolor;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            list-style-image: url(../assets/img/check-base.png);
+            padding-left: 12px;
+        }
+
+        &_items li{
+            padding-left: 12px;
+        }
+    }
 }
 </style>

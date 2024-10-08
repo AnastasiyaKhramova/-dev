@@ -1,4 +1,5 @@
 <template>
+<section>
     <table>
         <tr>
             <td></td>
@@ -166,6 +167,7 @@
             </td>
         </tr>
     </table>
+</section>
 </template>
 
 <script>
@@ -174,6 +176,9 @@ import yesBasic from '../assets/img/yesBasic.png'
 import yesFull from '../assets/img/yesFull.png'
 import no from '../assets/img/no.png'
 import Button from './Button.vue';
+export default {
+    
+}
 </script>
 
 <style lang="scss" scoped></style>
