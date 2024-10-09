@@ -24,9 +24,14 @@ td {
     margin: 0 !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
 .container {
+    padding: 0;
     min-width: $container;
-    min-height: 720px;
+    min-height: 667px;
     background-color: rgba(248, 249, 250, 1);
 }
 

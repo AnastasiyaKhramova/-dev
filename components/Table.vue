@@ -28,8 +28,8 @@
               <Popover />
             </div>
           </td>
-          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesBasic.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
@@ -38,22 +38,22 @@
               <Popover />
             </div>
           </td>
-          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesBasic.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
             <div class="table_point">Quizzes, Assignments, and Tests</div>
           </td>
-          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesBasic.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
             <div class="table_point">Excel, PPT, and PDF Files</div>
           </td>
-          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesBasic.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
@@ -61,22 +61,29 @@
               Digital Blockchain Verified Certificate
             </div>
           </td>
-          <td><img src="../assets/img/check-base.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesBasic.png" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
             <div class="table_point">Another Shared Benefit</div>
           </td>
-          <td><img src="../assets/img/check-base.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesBasic.png" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
             <div class="table_point">Another Shared Benefit</div>
           </td>
           <td><img src="../assets/img/no.png" alt="no" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table_point">Another Shared Benefit</div>
+          </td>
+          <td><img src="../assets/img/no.png" alt="no" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
@@ -86,7 +93,7 @@
             </div>
           </td>
           <td><img src="../assets/img/no.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
@@ -96,7 +103,7 @@
             </div>
           </td>
           <td><img src="../assets/img/no.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
@@ -106,17 +113,17 @@
             </div>
           </td>
           <td><img src="../assets/img/no.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
             <div class="table_point">
-              Model Review & Feedback
+              Additional Case Studies
               <Popover />
             </div>
           </td>
           <td><img src="../assets/img/no.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
@@ -126,14 +133,14 @@
             </div>
           </td>
           <td><img src="../assets/img/no.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td>
             <div class="table_point table-block">One FREE Financial Modeling Competition Entry</div>
           </td>
           <td><img src="../assets/img/no.png" /></td>
-          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
+          <td><img src="../assets/img/yesFull.png" alt="yesFull" /></td>
         </tr>
         <tr>
           <td></td>
@@ -141,14 +148,14 @@
             <div class="table_basic-bottom">
               <h3 class="table_choice">Basic</h3>
               <p class="table_cost">$564 / year</p>
-              <Button style="margin-top: 12px"/>
+              <Button style="margin-top: 14px"/>
             </div>
           </td>
           <td>
             <div class="table_full-bottom">
               <h3 class="table_choice">Full-Immersion</h3>
               <p class="table_cost">$924 / year</p>
-              <Button button-color="rgba(19, 46, 87, 1)" style="margin-top: 12px"/>
+              <Button button-color="rgba(19, 46, 87, 1)" style="margin-top: 14px"/>
             </div>
           </td>
         </tr>
@@ -167,7 +174,7 @@ export default {};
 .table {
   text-align: center;
   table-layout: fixed;
-  padding: 0;
+  padding-bottom: 76px;
 
   &_basic-top {
     border-top: 8px solid $basiccolor;
@@ -196,12 +203,13 @@ export default {};
   &_cost {
     line-height: 25.6px;
     color: $lighttextcolor;
+    margin-top: 6px;
   }
 
   &_point {
     display: flex;
     justify-content: space-between;
-    padding: 0 24px;
+    padding: 0 32px;
     line-height: 25.6px;
     color: $textcolor;
     margin: auto 0;
@@ -217,7 +225,7 @@ export default {};
 }
 
 .table-block {
-    width: 258px;
+    width: 280px;
     text-align: start;
 }
 

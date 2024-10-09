@@ -59,14 +59,15 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 544px;
+  height: 692px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   color: $fullcolor;
   border: none;
   position: absolute;
   right: 0;
-  bottom: -70px;
-
+  top: 399px;
+  
   &__heading {
     height: 32px;
     font-size: 14px;
@@ -165,13 +166,13 @@ export default {
       color: $textcolor;
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 15px;
       list-style-image: url(../assets/img/check-full.png);
-      padding-left: 12px;
+      padding-left: 24px;
     }
 
     &_items li {
-      padding-left: 12px;
+      padding-left: 6px;
     }
   }
 }

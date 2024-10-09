@@ -24,7 +24,7 @@ export default {
 .main {
     position: absolute;
     top: 144px;
-    left: 190px;
+    left: 200px;
 
     &__headding {
         font-size: 56px;

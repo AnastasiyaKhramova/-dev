@@ -4,7 +4,7 @@
     <Main />
     <Table/>
     <Faq/>
-    <!-- <Feedback/> -->
+    <Feedback/>
 
   </div>
 </template>

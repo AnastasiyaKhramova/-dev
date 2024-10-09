@@ -1,25 +1,31 @@
 <template>
-    <section class="container slider-container">
-        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis</h1>
-        <div>
-            <button class="controls" @click="prevSlide" :disabled="currentPage === 0"><img
-                    src="@/assets/img/prevSlide.png" alt="prevSlide"></button>
+    <section class="container">
+        <h1 class="feedback__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros
+            aliquam mattis</h1>
+        <div class="slider-container">
+            <button class="controls" @click="prevSlide" :disabled="currentPage === 0">
+                <img src="@/assets/img/prevSlide.png" alt="prevSlide">
+            </button>
             <div class="slider">
-                <div class="slide" v-for="slide in slides" :key="slide.id">
-                    <img class="slide__img" :src="slide.photo" alt="Photo">
-                    <h3 class="slide__title">{{ slide.name }} <span>{{ slide.profession }}</span></h3>
+                <div class="slide" v-for="slide in visibleSections" :key="slide.id">
+                    <div class="slide__headding">
+                        <img class="slide__img" :src="slide.photo" alt="Photo">
+                        <h3 class="slide__title">{{ slide.name }} <h4>{{ slide.profession }}</h4></h3>
+                    </div>
                     <p class="slide__desc">{{ slide.description }}</p>
                     <a class="slide__more" href="#">{{ slide.more }}</a>
                 </div>
             </div>
-            <button class="controls" @click="nextSlide" :disabled="currentPage === maxPage"><img
-                    src="@/assets/img/nextSlide.png" alt="nextSlide"></button>
+            <button class="controls" @click="nextSlide" :disabled="currentPage === maxPage">
+                <img src="@/assets/img/nextSlide.png" alt="nextSlide">
+            </button>
         </div>
     </section>
 </template>
 
 <script>
-import { uuidv4 } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
+import photo from '../assets/img/photo.png'
 
 export default {
     data() {
@@ -27,7 +33,7 @@ export default {
             slides: [
                 {
                     id: uuidv4(),
-                    photo: require('@/assets/img/photo.png'),
+                    photo: photo,
                     name: 'John Doe',
                     profession: 'Financial Controller',
                     description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”',
@@ -35,7 +41,7 @@ export default {
                 },
                 {
                     id: uuidv4(),
-                    photo: require('@/assets/img/photo.png'),
+                    photo: photo,
                     name: 'John Doe',
                     profession: 'Financial Controller',
                     description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”',
@@ -43,7 +49,7 @@ export default {
                 },
                 {
                     id: uuidv4(),
-                    photo: require('@/assets/img/photo.png'),
+                    photo: photo,
                     name: 'John Doe',
                     profession: 'Financial Controller',
                     description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”',
@@ -51,7 +57,7 @@ export default {
                 },
                 {
                     id: uuidv4(),
-                    photo: require('@/assets/img/photo.png'),
+                    photo: photo,
                     name: 'John Doe',
                     profession: 'Financial Controller',
                     description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”',
@@ -59,14 +65,14 @@ export default {
                 },
                 {
                     id: uuidv4(),
-                    photo: require('@/assets/img/photo.png'),
+                    photo: photo,
                     name: 'John Doe',
                     profession: 'Financial Controller',
                     description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”',
                     more: 'Read more'
                 }, {
                     id: uuidv4(),
-                    photo: require('@/assets/img/photo.png'),
+                    photo: photo,
                     name: 'John Doe',
                     profession: 'Financial Controller',
                     description: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at erat eget eros aliquam mattis ut vehicula sapien. Nam a tortor nulla. Sed sed erat eget enim feugiat dapibus et non justo ...”',
@@ -79,11 +85,11 @@ export default {
     },
     computed: {
         pageCount() {
-            return Math.ceil(this.sections.length / this.itemsPerPage);
+            return Math.ceil(this.slides.length / this.itemsPerPage);
         },
         visibleSections() {
             const start = this.currentPage * this.itemsPerPage;
-            return this.sections.slice(start, start + this.itemsPerPage);
+            return this.slides.slice(start, start + this.itemsPerPage);
         },
         maxPage() {
             return this.pageCount - 1;
@@ -104,61 +110,70 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.feedback__title {
+    width: 920px;
+    padding-top: 80px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+    color: $fullcolor;
+    margin: 0 auto;
+}
+
 .slider-container {
+    margin-top: 108px;
     height: 250px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    background-color: white;
-    border-radius: 20px;
-    position: relative;
-    top: -30px;
-    z-index: 1;
+    padding: 0 29px;
+    justify-content: space-between;
 }
 
 .slider {
     display: flex;
-    cursor: pointer;
+    gap: 34px;
 }
 
 .slide {
+    background-color: $blockcolor;
     width: 350px;
+    height: 327px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    padding: 32px;
+
+    &__headding {
+        width: 286px;
+        display: flex;
+        gap: 25px;
+        margin-bottom: 22px;
+    }
 
     &__img {
-        width: 47px;
+        height: 47px;
     }
 
     &__title {
         font-size: 18px;
         font-weight: 600;
         color: rgba(30, 41, 57, 1);
-        line-height: 4.51px;
-        text-align: center;
     }
 
-    &__title span {
+    &__title h4 {
         font-size: 16px;
         font-weight: 400;
         color: rgba(28, 125, 135, 1);
     }
 
     &__desc {
-        font-size: 16px;
-        font-weight: 400;
         line-height: 24.84px;
-        text-align: left;
         color: $textcolor;
+        margin-bottom: 16px;
     }
 
     &__more {
-        font-size: 16px;
         font-weight: 700;
-        line-height: 24.84px;
-        text-align: left;
         color: $fullcolor;
     }
 }
@@ -166,6 +181,9 @@ export default {
 .controls {
     width: 64px;
     height: 64px;
+    background-color: $basiccolor;
+    border: 1px solid $basiccolor;
+    border-radius: 50px;
     cursor: pointer;
 }
 </style>

@@ -29,8 +29,9 @@ export default {
 
 <style lang="scss" scoped>
 .popover {
-  background-color: #1e2939;
-  border: 1px solid #1e2939;
+  width: 191px;
+  background-color: rgba(30, 41, 57, 1);
+  border: 1px solid rgba(30, 41, 57, 1);
 }
 
 .popover-arrow {

@@ -14,12 +14,7 @@
       <div class="card__cost">
         <h4 class="card__cost_title">Pick your plan:</h4>
         <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
-          />
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
           <label class="form-check-label" for="flexRadioDefault1">
             <div class="card__cost_choice">
               <h2 class="card__cost_price">$47<span>/month </span></h2>
@@ -29,13 +24,7 @@
           </label>
         </div>
         <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            checked
-          />
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
           <label class="form-check-label" for="flexRadioDefault2">
             <div class="card__cost_choice">
               <h2 class="card__cost_price">$87<span>/month </span></h2>
@@ -80,12 +69,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.form-check {
+  margin-bottom: 0;
+}
+
 .card {
   width: 544px;
+  height: 731px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
   color: $fullcolor;
   border: none;
+  position: relative;
+  top: 9px;
 
   &__heading {
     height: 32px;
@@ -102,10 +98,10 @@ export default {
   }
 
   &__conteiner {
-    padding: 48px;
+    padding: 49px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 22px;
 
     &_title {
       margin-bottom: 4px;
@@ -185,23 +181,23 @@ export default {
       color: $textcolor;
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 19px;
       list-style-image: url(../assets/img/check-base.png);
-      padding-left: 12px;
+      padding-left: 23px;
     }
 
     &_items li {
-      padding-left: 12px;
+      padding-left: 6px;
     }
   }
 }
 
-input[type="radio"]:checked ~ label {
+input[type="radio"]:checked~label {
   color: $fullcolor;
 }
 
 
-input[type="radio"]:not(:checked) ~ label {
+input[type="radio"]:not(:checked)~label {
   color: $lighttextcolor;
 }
 </style>

@@ -36,13 +36,12 @@ const debouncedHandleSearchChange = useDebounceFn((e) => {
 .header {
     height: 636px;
     background-image: url('../assets/img/background.png');
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .find {
     display: flex;
     justify-content: space-between;
-    padding-top: 12px;
 }
 
 .find-wrapper {
@@ -53,7 +52,7 @@ const debouncedHandleSearchChange = useDebounceFn((e) => {
 
 .find-img {
     position: absolute;
-    left: 16px;
+    left: 17px;
     width: 16px;
     height: 16px;
 }

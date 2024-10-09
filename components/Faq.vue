@@ -17,6 +17,7 @@
 
 <script>
 import { v4 as uuidv4 } from 'uuid';
+import plus from '../assets/img/plus.png'
 export default {
     data() {
         return {
@@ -25,55 +26,55 @@ export default {
                     id: uuidv4(),
                     question: 'Can I download the Excel files and financial modeling templates?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'How long do I have to complete the course?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'Are courses verified?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'Are there additional fees or costs? ',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'What currency are your courses priced in?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'How do I earn my certificates?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'Can I email the instructor if I have questions?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'Wil these courses help me advanced my career?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 },
                 {
                     id: uuidv4(),
                     question: 'More questions?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: '@/assets/img/plus.png'
+                    img: plus
                 }
             ]
         }
@@ -82,29 +83,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.faq__title {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 44px;
-    margin-bottom: 48px;
-    color: $fullcolor;
+.container {
+    padding-top: 90px;
 }
 
 .faq {
-    width: 880px;
+    min-width: 880px;
     min-height: 388px;
-    margin-top: 122px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 60px 0;
+    padding: 110px 221px;
+    background-color: $blockcolor;
+    
+    &__title {
+        font-weight: 700;
+        line-height: 44px;
+        margin-bottom: 35px;
+        color: $fullcolor;
+        text-align: center;
+    }
 
     &__details {
         color: $fullcolor;
         font-weight: 600;
         line-height: 26px;
         border-bottom: 1px solid rgba(235, 235, 235, 1);
-        padding: 25px 0;
+        padding: 14px 0;
         overflow: hidden;
         max-height: 77px;
         transition: max-height 1s ease, padding 1s ease;
