@@ -14,13 +14,19 @@ a {
     cursor: pointer;
 }
 
-button{
-    cursor: pointer;
+p {
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .container {
     min-width: $container;
-    min-height: 770px;
+    min-height: 720px;
     background-color: rgba(248, 249, 250, 1);
 }
 
@@ -28,3 +34,4 @@ button{
     width: $second-container;
     margin: 0 auto;
 }
+

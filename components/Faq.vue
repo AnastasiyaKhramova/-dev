@@ -3,10 +3,10 @@
         <div class="faq">
             <div>
                 <h2 class="faq__title">Frequently Asked Questions</h2>
-                <details class="faq__details" aria-expanded="false" v-for="question in questions" :key="question.id">
+                <details class="faq__details" v-for="question in questions" :key="question.id">
                     <summary>
                         {{ question.question }}
-                        <img class="faq__icon" :src="question.img" aria-hidden="true" alt="plus" />
+                        <img class="faq__icon" :src="question.img" alt="plus" />
                     </summary>
                     {{ question.answer }}
                 </details>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { uuidv4 } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 export default {
     data() {
         return {
@@ -25,57 +25,56 @@ export default {
                     id: uuidv4(),
                     question: 'Can I download the Excel files and financial modeling templates?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'How long do I have to complete the course?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'Are courses verified?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'Are there additional fees or costs? ',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'What currency are your courses priced in?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'How do I earn my certificates?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'Can I email the instructor if I have questions?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'Wil these courses help me advanced my career?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 },
                 {
                     id: uuidv4(),
                     question: 'More questions?',
                     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum officia vero cupiditate provident, animi facilis? Laborum ullam mollitia modi!',
-                    img: require('@/assets/img/plus.png')
+                    img: '@/assets/img/plus.png'
                 }
-
             ]
         }
     },
@@ -99,17 +98,19 @@ export default {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 60px 0;
+
+    &__details {
+        color: $fullcolor;
+        font-weight: 600;
+        line-height: 26px;
+        border-bottom: 1px solid rgba(235, 235, 235, 1);
+        padding: 25px 0;
+        overflow: hidden;
+        max-height: 77px;
+        transition: max-height 1s ease, padding 1s ease;
+    }
 }
 
-.faq__details {
-    font-weight: 600;
-    line-height: 26px;
-    border-bottom: 1px solid rgba(235, 235, 235, 1);
-    padding: 25px 0;
-    overflow: hidden;
-    max-height: 77px;
-    transition: max-height 1s ease, padding 1s ease;
-}
 
 .faq__details[open] {
     max-height: 152px;

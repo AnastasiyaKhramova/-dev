@@ -1,184 +1,228 @@
 <template>
-<section>
-    <table>
+  <section class="container">
+    <table class="second-container table table-bordered">
+      <thead class="table-custom">
         <tr>
-            <td></td>
-            <td>
-                <div>
-                    <p>All-Access Membership</p>
-                    <h3>Basic</h3>
-                    <p>$564 / year</p>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <p>All-Access Membership</p>
-                    <h3>Full-Immersion</h3>
-                    <p>$924 / year</p>
-                </div>
-            </td>
+          <td></td>
+          <td>
+            <div class="table_basic-top">
+              <p class="table_desc">All-Access Membership</p>
+              <h4 class="table_choice">Basic</h4>
+              <p class="table_cost">$564 / year</p>
+            </div>
+          </td>
+          <td>
+            <div class="table_full-top">
+              <p class="table_desc">All-Access Membership</p>
+              <h4 class="table_choice">Full-Immersion</h4>
+              <p class="table_cost">$924 / year</p>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="table_point">
+              All 100+ Courses
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>All 100+ Courses</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="yesBasic" alt="yesBasic"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">
+              All Certificate Programs
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>All Certificate Programs</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="yesBasic" alt="yesBasic"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">Quizzes, Assignments, and Tests</div>
+          </td>
+          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Quizzes, Assignments, and Tests</h2>
-                </div>
-            </td>
-            <td><img :src="yesBasic" alt="yesBasic"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">Excel, PPT, and PDF Files</div>
+          </td>
+          <td><img src="../assets/img/check-base.png" alt="yesBasic" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Excel, PPT, and PDF Files</h2>
-                </div>
-            </td>
-            <td><img :src="yesBasic" alt="yesBasic"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point table-block">
+              Digital Blockchain Verified Certificate
+            </div>
+          </td>
+          <td><img src="../assets/img/check-base.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Digital Blockchain Verified Certificate</h2>
-                </div>
-            </td>
-            <td><img :src="yesBasic" alt="yesBasic"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">Another Shared Benefit</div>
+          </td>
+          <td><img src="../assets/img/check-base.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Another Shared Benefit</h2>
-                </div>
-            </td>
-            <td><img :src="yesBasic" alt="yesBasic"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">Another Shared Benefit</div>
+          </td>
+          <td><img src="../assets/img/no.png" alt="no" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Another Shared Benefit</h2>
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">
+              Exclusive Partner Integrations
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/no.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Exclusive Partner Integrations</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">
+              Premium Email Support
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/no.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Premium Email Support</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">
+              Model Review & Feedback
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/no.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Model Review & Feedback</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">
+              Model Review & Feedback
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/no.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Model Review & Feedback</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point">
+              Résumé & Cover Letter Review
+              <Popover />
+            </div>
+          </td>
+          <td><img src="../assets/img/no.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>Résumé & Cover Letter Review</h2>
-                    <img v-b-popover.hover.right="'Default tooltip. Here you’ll find something on the left.'"
-                        :src="question" alt="question">
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td>
+            <div class="table_point table-block">One FREE Financial Modeling Competition Entry</div>
+          </td>
+          <td><img src="../assets/img/no.png" /></td>
+          <td><img src="../assets/img/check-full.png" alt="yesFull" /></td>
         </tr>
         <tr>
-            <td>
-                <div>
-                    <h2>One FREE Financial Modeling Competition Entry</h2>
-                </div>
-            </td>
-            <td><img :src="no" alt="no"></td>
-            <td><img :src="yesFull" alt="yesFull"></td>
+          <td></td>
+          <td>
+            <div class="table_basic-bottom">
+              <h3 class="table_choice">Basic</h3>
+              <p class="table_cost">$564 / year</p>
+              <Button style="margin-top: 12px"/>
+            </div>
+          </td>
+          <td>
+            <div class="table_full-bottom">
+              <h3 class="table_choice">Full-Immersion</h3>
+              <p class="table_cost">$924 / year</p>
+              <Button button-color="rgba(19, 46, 87, 1)" style="margin-top: 12px"/>
+            </div>
+          </td>
         </tr>
-        <tr>
-            <td></td>
-            <td>
-                <div>
-                    <h3>Basic</h3>
-                    <p>$564 / year</p>
-                    <Button />
-                </div>
-            </td>
-            <td>
-                <div>
-                    <h3>Full-Immersion</h3>
-                    <p>$924 / year</p>
-                    <Button />
-                </div>
-            </td>
-        </tr>
+      </tbody>
     </table>
-</section>
+  </section>
 </template>
 
 <script>
-import question from '../assets/img/question.svg'
-import yesBasic from '../assets/img/yesBasic.png'
-import yesFull from '../assets/img/yesFull.png'
-import no from '../assets/img/no.png'
-import Button from './Button.vue';
-export default {
-    
-}
+import Button from "./Button.vue";
+import Popover from "./Popover.vue";
+export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.table {
+  text-align: center;
+  table-layout: fixed;
+  padding: 0;
+
+  &_basic-top {
+    border-top: 8px solid $basiccolor;
+    padding: 40px 110px 32px;
+  }
+
+  &_full-top {
+    border-top: 8px solid $fullcolor;
+    padding: 40px 110px 32px;
+  }
+
+  &_desc {
+    font-size: 14px;
+    line-height: 22.4px;
+    color: $lighttextcolor;
+  }
+
+  &_choice {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+    color: $fullcolor;
+    margin-top: 4px;
+  }
+
+  &_cost {
+    line-height: 25.6px;
+    color: $lighttextcolor;
+  }
+
+  &_point {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    line-height: 25.6px;
+    color: $textcolor;
+    margin: auto 0;
+  }
+
+  &_basic-bottom {
+    padding: 20px 101px 48px;
+  }
+
+  &_full-bottom {
+    padding: 20px 101px 48px;
+  }
+}
+
+.table-block {
+    width: 258px;
+    text-align: start;
+}
+
+tr {
+    height: 80px;
+    vertical-align: middle;
+}
+</style>

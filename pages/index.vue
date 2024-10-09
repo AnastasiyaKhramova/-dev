@@ -3,8 +3,8 @@
     <Header />
     <Main />
     <Table/>
-    <!-- <Faq/>
-    <Feedback/> -->
+    <Faq/>
+    <!-- <Feedback/> -->
 
   </div>
 </template>
