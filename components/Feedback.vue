@@ -122,7 +122,7 @@ export default {
 }
 
 .slider-container {
-    margin-top: 108px;
+    margin-top: 116px;
     height: 250px;
     display: flex;
     align-items: center;

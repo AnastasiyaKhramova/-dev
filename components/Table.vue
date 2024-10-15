@@ -174,7 +174,12 @@ export default {};
 .table {
   text-align: center;
   table-layout: fixed;
-  padding-bottom: 76px;
+  margin-top: -325px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   &_basic-top {
     border-top: 8px solid $basiccolor;
@@ -183,6 +188,7 @@ export default {};
 
   &_full-top {
     border-top: 8px solid $fullcolor;
+    border-top-right-radius: 8px;
     padding: 40px 110px 32px;
   }
 
@@ -233,4 +239,9 @@ tr {
     height: 80px;
     vertical-align: middle;
 }
+
+td, th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 </style>

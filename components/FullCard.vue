@@ -13,11 +13,11 @@
       </div>
       <div class="card__cost">
         <div class="card__cost_choice">
-          <h2 class="card__cost_price">$77<span>/month </span></h2>
+          <h2 class="card__cost_price">$77<span> /month </span></h2>
           <p>(pay annually — $924 / year)</p>
         </div>
       </div>
-      <Button button-color="rgba(19, 46, 87, 1)"/>
+      <Button button-color="rgba(19, 46, 87, 1)" />
       <div>
         <p class="card__include">Everything in Basic, plus:</p>
       </div>
@@ -26,15 +26,15 @@
           <li>Capital IQ & EIKON Partner Integrations</li>
           <li>
             Premium Email Support
-            <Popover/>
+            <Popover />
           </li>
           <li>
             Model Review & Feedback
-            <Popover/>
+            <Popover />
           </li>
           <li>
             Additional Case Studies
-           <Popover/>
+            <Popover />
           </li>
           <li>Resume & Cover Letter Review</li>
           <li>A FREE Modeling Competition Entry</li>
@@ -59,17 +59,16 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 544px;
-  height: 692px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   color: $fullcolor;
   border: none;
   position: absolute;
-  right: 0;
-  top: 399px;
-  
+  right: 121px;
+  bottom: -95px;
+
   &__heading {
-    height: 32px;
+    min-height: 32px;
     font-size: 14px;
     font-weight: 700;
     line-height: 22.4px;

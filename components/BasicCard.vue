@@ -76,15 +76,13 @@ export default {
 .card {
   width: 544px;
   height: 731px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   color: $fullcolor;
   border: none;
-  position: relative;
-  top: 9px;
 
   &__heading {
-    height: 32px;
+    min-height: 32px;
     font-size: 14px;
     font-weight: 700;
     line-height: 22.4px;

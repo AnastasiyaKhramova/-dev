@@ -97,10 +97,12 @@ export default {
     background-color: $blockcolor;
     
     &__title {
+        font-size: 32px;
         font-weight: 700;
         line-height: 44px;
         margin-bottom: 35px;
         color: $fullcolor;
+        padding-right: 52px;
         text-align: center;
     }
 

@@ -5,7 +5,6 @@
     data-bs-toggle="popover"
     data-bs-placement="right"
     data-bs-content="Default tooltip. Here you’ll find something on the left."
-
   />
 </template>
 
@@ -27,22 +26,23 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .popover {
   width: 191px;
+  height: 100px;
   background-color: rgba(30, 41, 57, 1);
+  border-radius: 4px;
   border: 1px solid rgba(30, 41, 57, 1);
 }
 
-.popover-arrow {
-  border-top-color: #1e2939;
+.popover-arrow::after {
+    border-right-color: #1e2939 !important;
 }
 
 .popover-body {
-  font-size: 14px;
-  font-weight: 400;
   line-height: 22.4px;
   text-align: center;
   color: #ffffff;
+  padding: 16px;
 }
 </style>

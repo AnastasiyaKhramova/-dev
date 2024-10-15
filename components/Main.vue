@@ -1,4 +1,4 @@
-<template>
+<template> 
     <main class="container">
         <div class="second-container main">
             <h1 class="main__headding">Pricing Plans</h1>
@@ -22,10 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 .main {
-    position: absolute;
-    top: 144px;
-    left: 200px;
-
     &__headding {
         font-size: 56px;
         font-weight: 700;
@@ -41,12 +37,13 @@ export default {
         text-align: center;
         color: $blockcolor;
         margin-top: 32px;
-        margin-bottom: 156px;
+        margin-bottom: 159px;
     }
 }
 
 .cards {
     display: flex;
     justify-content: space-between;
+    min-height: 627px;
 }
 </style>

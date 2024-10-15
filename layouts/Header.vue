@@ -37,6 +37,7 @@ const debouncedHandleSearchChange = useDebounceFn((e) => {
     height: 636px;
     background-image: url('../assets/img/background.png');
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .find {
